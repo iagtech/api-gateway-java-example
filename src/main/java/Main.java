@@ -49,12 +49,12 @@ public class Main {
         String bearerToken = obtainBearerToken();
 
         // after obtaining the bearer token, connect to the API endpoint
-        Unirest.get(("https://test.com/sample/api/endpoint"))
+        Unirest.get("https://test.com/sample/api/endpoint")
             .header("Authorization", "Bearer " + bearerToken)
             .asJson();
 
         // after obtaining the bearer token, connect to the API endpoint
-        Unirest.post(("https://test.com/sample/api/endpoint"))
+        Unirest.post("https://test.com/sample/api/endpoint")
             .header("Authorization", "Bearer " + bearerToken)
             .header("Content-Type", "application/json")
             .body("{\"sample\":\"json\"}")
