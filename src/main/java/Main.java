@@ -57,6 +57,7 @@ public class Main {
         Unirest.post(("https://test.com/sample/api/endpoint"))
             .header("Authorization", "Bearer " + bearerToken)
             .header("Content-Type", "application/json")
+            .body("{\"sample\":\"json\"}")
             .asJson();
     }
 }
